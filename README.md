@@ -88,7 +88,7 @@ F H <BR>
 <hr>
 ['0', '1', '2', '3', '4']
 
-##Program
+## Program
 ```
 from collections import defaultdict
 def dfs(graph, start, visited, path):
@@ -111,7 +111,7 @@ path = []
 traversed_path = dfs(graph, start, visited, path)
 print(traversed_path)
 ```
-##Output
+## Output
 <img width="1625" height="442" alt="image" src="https://github.com/user-attachments/assets/a9fe4424-c272-4a8e-bc3a-e6398ca90dbc" />
 
 
