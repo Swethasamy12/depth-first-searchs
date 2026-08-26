@@ -88,6 +88,33 @@ F H <BR>
 <hr>
 ['0', '1', '2', '3', '4']
 
+##Program
+```
+from collections import defaultdict
+def dfs(graph, start, visited, path):
+    path.append(start)  
+    visited[start] = True 
+   
+    for neighbour in graph[start]:
+        if not visited[neighbour]:
+            dfs(graph, neighbour, visited, path)
+    return path
+graph = defaultdict(list)
+n, e = map(int, input().split())  
+for i in range(e):
+    u, v = input().split()  
+    graph[u].append(v)
+    graph[v].append(u)  
+start = 'A'
+visited = defaultdict(bool)
+path = []
+traversed_path = dfs(graph, start, visited, path)
+print(traversed_path)
+```
+##Output
+<img width="1625" height="442" alt="image" src="https://github.com/user-attachments/assets/a9fe4424-c272-4a8e-bc3a-e6398ca90dbc" />
+
+
 <hr>
 <h3>Result:</h3>
 <hr>
